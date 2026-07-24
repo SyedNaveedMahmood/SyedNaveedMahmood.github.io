@@ -44,7 +44,37 @@
       <p>I will use this space to explain interesting AI developments in simple language. Each post will focus on the central idea, the evidence behind it, and the limitations that are easy to miss.</p>
     </section>
 
-    <article class="blog-post">
+    <article id="inside-llm-thoughts" class="blog-post">
+      <div class="post-meta">Opinion · July 25, 2026 · 4 minute read</div>
+      <h2>The next major AI breakthrough will come from looking inside LLMs</h2>
+      <p class="post-lead">I believe the next major step in artificial intelligence is not simply building a larger model. It is learning how to map what happens inside a model while it produces an answer.</p>
+
+      <h3>Powerful systems, limited understanding</h3>
+      <p>Large language models can write code, analyze papers, use tools, and solve difficult problems. Yet we still understand them mainly through their inputs and outputs. We give a model a prompt, observe its answer, and measure whether that answer is correct. The most important part, the internal process connecting the prompt to the answer, is still difficult to interpret.</p>
+
+      <p>When I use the word “thought,” I do not mean that an LLM thinks exactly like a human or has human consciousness. I mean its internal computation: which representations become active, how information moves across layers, which circuits influence a decision, where uncertainty appears, and how an early signal develops into the final prediction.</p>
+
+      <h3>What a proper map would show</h3>
+      <p>A useful internal map should let us follow a concept from the moment it appears in the prompt to the moment it affects an output. It should show where the model stores the relevant information, which pathways carry it, how different pieces of context interact, and whether an intervention truly removes an influence or merely hides it temporarily.</p>
+
+      <p>This map cannot be only an attractive visualization or a plausible explanation. It must support causal tests. If a researcher claims that a particular representation or circuit controls a behavior, changing that component should alter the behavior in a predictable way. The explanation should also remain reliable across prompts, models, checkpoints, and evaluation settings.</p>
+
+      <h3>Why it could change everything</h3>
+      <p>Reliable internal mapping would transform many areas of AI research. In machine unlearning, it could help distinguish genuine knowledge removal from output suppression. In AI safety, it could reveal whether a hidden objective still influences an agent even when the final response appears safe. In model compression, it could show where quantization changes useful computation. In interpretability, it could turn broad behavioral observations into testable mechanistic explanations.</p>
+
+      <p>It could also change how we debug models. Instead of repeatedly adjusting prompts or training data and hoping for improvement, researchers could identify where a failure begins, how it spreads, and which intervention corrects it without damaging unrelated abilities.</p>
+
+      <h3>The achievement I am waiting for</h3>
+      <p>If someone can build a reliable, detailed, and causally validated map of an LLM’s internal computation, I believe it will be one of the biggest achievements in modern AI. It would give us something close to a scientific microscope for neural networks. We would move from observing what models do to explaining why they do it.</p>
+
+      <p>The next major breakthrough may therefore not be another jump in parameter count. It may be the moment when the inside of a language model stops looking like an unreadable collection of numbers and starts becoming a system that we can trace, test, and genuinely understand.</p>
+
+      <div class="source-links">
+        <a href="#nla">Related: Anthropic’s NLA, explained simply ↓</a>
+      </div>
+    </article>
+
+    <article id="nla" class="blog-post">
       <div class="post-meta">Interpretability · May 7, 2026 · 4 minute read</div>
       <h2>Anthropic’s Natural Language Autoencoders, explained simply</h2>
       <p class="post-lead">Natural Language Autoencoders, or NLAs, try to translate an AI model’s internal numerical state into ordinary text that people can read.</p>
