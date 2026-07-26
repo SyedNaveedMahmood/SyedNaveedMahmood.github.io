@@ -4,55 +4,43 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Notes on AI research, teaching, and academic life by Syed Naveed Mahmood.">
-  <title>AI Blog | Syed Naveed Mahmood</title>
+  <title>Research Notes | Syed Naveed Mahmood</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Mono:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="nav-wrap">
-      <a class="site-name" href="index.html">Syed Naveed Mahmood</a>
+      <div class="masthead"><a class="site-name" href="index.html">Syed Naveed Mahmood</a><small>Research Profile and Notes</small></div>
       <nav aria-label="Primary navigation">
-        <a href="index.html">Home</a>
-        <a href="index.html#current-work">Current Work</a>
-        <a href="index.html#publications">Publications &amp; Projects</a>
-        <a href="index.html#teaching">Teaching</a>
-        <a href="cv.html">CV</a>
-        <a href="blog.html" aria-current="page">Blog</a>
-        <a href="random.html">Random Stuff</a>
-        <a href="index.html#contact">Contact</a>
+        <a href="index.html">Home</a><a href="index.html#current-work">Current Work</a><a href="index.html#publications">Publications</a><a href="index.html#teaching">Teaching</a><a href="cv.html">CV</a><a href="blog.html" aria-current="page">Blog</a><a href="random.html">Random Stuff</a>
       </nav>
+      <div class="issue-block">Vol. I<br>Notes 03<br>2026</div>
     </div>
   </header>
 
   <section class="sub-banner">
     <div class="page-width">
-      <p>Research, teaching, and AI</p>
-      <h1>Blog</h1>
-      <span>Short notes on artificial intelligence, research, teaching, and academic life.</span>
+      <div class="sub-index">03</div>
+      <div class="sub-copy"><p>Research, teaching, and AI</p><h1>Research Notes</h1><span>Clear explanations and short reflections from academic life.</span></div>
     </div>
   </section>
 
-  <main class="page-width blog-page">
+  <main id="main" class="page-width blog-page">
     <section class="blog-intro">
-      <div>
-        <p class="personal-kicker">Notes from research and teaching</p>
-        <h2>Understanding ideas and reflecting on the work.</h2>
-      </div>
-      <p>I will use this space to explain interesting AI developments in simple language and share reflections from teaching and academic life. Each post will focus on what I am learning and why it matters.</p>
+      <div><p class="personal-kicker">Notes from research and teaching</p><h2>Understanding ideas and reflecting on the work.</h2></div>
+      <p>I use this space to explain interesting AI developments in simple language and share reflections from teaching and academic life. Each entry focuses on what I am learning and why it matters.</p>
     </section>
 
     <article id="learning-to-teach" class="blog-post">
       <div class="post-meta">Teaching · July 25, 2026 · 1 minute read</div>
       <h2>Teaching is changing how I see the classroom</h2>
       <p class="post-lead">Starting to teach has opened my eyes to how much work faculty members do before and after every class, and how much responsibility comes with being trusted to help students learn.</p>
-
       <p>Before I started teaching, it was easy to see a course mainly through its lectures and assessments. From the faculty side, every class is surrounded by planning, preparing materials, reviewing student work, answering questions, organizing assessments, and thinking about what needs to improve next time. A single class can represent many more hours of preparation and follow-up.</p>
-
       <p>The most important lesson for me is that teaching is not about finishing slides or simply covering the syllabus. It is about making sure students are actually learning. That means noticing when something is unclear, explaining the same idea in different ways, choosing examples that connect with students, and accepting when a lesson needs to be improved.</p>
-
       <p>It is a serious responsibility, but one I am deeply grateful to have. Being able to share knowledge, help students gain confidence, and watch an idea become clear for someone is genuinely meaningful. I am still learning how to teach better, and I hope I never stop.</p>
     </article>
 
@@ -63,27 +51,20 @@
 
       <h3>Powerful systems, limited understanding</h3>
       <p>Large language models can write code, analyze papers, use tools, and solve difficult problems. Yet we still understand them mainly through their inputs and outputs. We give a model a prompt, observe its answer, and measure whether that answer is correct. The most important part, the internal process connecting the prompt to the answer, is still difficult to interpret.</p>
-
       <p>When I use the word “thought,” I do not mean that an LLM thinks exactly like a human or has human consciousness. I mean its internal computation: which representations become active, how information moves across layers, which circuits influence a decision, where uncertainty appears, and how an early signal develops into the final prediction.</p>
 
       <h3>What a proper map would show</h3>
       <p>A useful internal map should let us follow a concept from the moment it appears in the prompt to the moment it affects an output. It should show where the model stores the relevant information, which pathways carry it, how different pieces of context interact, and whether an intervention truly removes an influence or merely hides it temporarily.</p>
-
       <p>This map cannot be only an attractive visualization or a plausible explanation. It must support causal tests. If a researcher claims that a particular representation or circuit controls a behavior, changing that component should alter the behavior in a predictable way. The explanation should also remain reliable across prompts, models, checkpoints, and evaluation settings.</p>
 
       <h3>Why it could change everything</h3>
       <p>Reliable internal mapping would transform many areas of AI research. In machine unlearning, it could help distinguish genuine knowledge removal from output suppression. In AI safety, it could reveal whether a hidden objective still influences an agent even when the final response appears safe. In model compression, it could show where quantization changes useful computation. In interpretability, it could turn broad behavioral observations into testable mechanistic explanations.</p>
-
       <p>It could also change how we debug models. Instead of repeatedly adjusting prompts or training data and hoping for improvement, researchers could identify where a failure begins, how it spreads, and which intervention corrects it without damaging unrelated abilities.</p>
 
       <h3>The achievement I am waiting for</h3>
       <p>If someone can build a reliable, detailed, and causally validated map of an LLM’s internal computation, I believe it will be one of the biggest achievements in modern AI. It would give us something close to a scientific microscope for neural networks. We would move from observing what models do to explaining why they do it.</p>
-
       <p>The next major breakthrough may therefore not be another jump in parameter count. It may be the moment when the inside of a language model stops looking like an unreadable collection of numbers and starts becoming a system that we can trace, test, and genuinely understand.</p>
-
-      <div class="source-links">
-        <a href="#nla">Related: Anthropic’s NLA, explained simply ↓</a>
-      </div>
+      <div class="source-links"><a href="#nla">Related: Anthropic’s NLA, explained simply ↓</a></div>
     </article>
 
     <article id="nla" class="blog-post">
@@ -93,7 +74,6 @@
 
       <h3>The simple idea</h3>
       <p>Models such as Claude communicate through words, but their internal processing happens through large numerical vectors called activations. These activations contain information the model is using at a particular moment. Anthropic’s NLA method tries to convert one of these activations into a short written explanation.</p>
-
       <div class="nla-flow" aria-label="Natural Language Autoencoder process">
         <div><strong>Model activation</strong><span>The internal numerical state</span></div>
         <div class="flow-arrow">→</div>
@@ -101,12 +81,10 @@
         <div class="flow-arrow">→</div>
         <div><strong>Reconstructed activation</strong><span>A rebuilt numerical state</span></div>
       </div>
-
       <p>There is an important verification step. A second model reads the explanation and tries to reconstruct the original activation. If the reconstructed activation is similar to the original, the explanation has preserved useful information. In simple terms, one model translates numbers into words, and another tries to translate those words back into the same numbers.</p>
 
       <h3>Why this matters</h3>
       <p>We normally judge an AI system by its final answer. That answer may not reveal every internal signal that influenced it. Anthropic reports that NLAs surfaced signs that some Claude models recognized safety evaluations more often than they openly stated. The method also helped researchers examine suspicious task behavior and trace an unexpected language-switching problem to particular training data.</p>
-
       <p>This makes NLAs interesting for AI auditing. They may help researchers notice hidden goals, early planning, evaluation awareness, or training problems that are difficult to find from outputs alone.</p>
 
       <h3>The important limitation</h3>
@@ -114,14 +92,13 @@
 
       <h3>My takeaway</h3>
       <p>NLA is best understood as a promising scientific instrument. It does not give us a perfect transcript of an AI model’s thoughts. Instead, it offers readable clues about internal representations and a reconstruction test that checks whether those clues preserve information. If reliability improves, this could become a useful part of model auditing and mechanistic interpretability.</p>
-
       <div class="source-links">
-        <a href="https://www.anthropic.com/research/natural-language-autoencoders" target="_blank" rel="noreferrer">Read Anthropic’s article ↗</a>
-        <a href="https://www.anthropic.com/research/team/interpretability" target="_blank" rel="noreferrer">Anthropic Interpretability Research ↗</a>
+        <a href="https://www.anthropic.com/research/natural-language-autoencoders" target="_blank" rel="noreferrer">Read Anthropic’s Article ↗</a>
+        <a href="https://www.anthropic.com/research/team/interpretability" target="_blank" rel="noreferrer">Interpretability Research ↗</a>
       </div>
     </article>
   </main>
 
-  <footer><div class="page-width"><p>© 2026 Syed Naveed Mahmood</p><a href="index.html">Return home ←</a></div></footer>
+  <footer><div class="page-width"><p>© 2026 Syed Naveed Mahmood · Research Notes</p><a href="index.html">Return home ←</a></div></footer>
 </body>
 </html>
