@@ -39,6 +39,17 @@ nav a{font-size:.86rem}
 .dashboard-news .updates>div:first-child{background:var(--surface);border-left:3px solid var(--blue);padding:10px 10px;margin-top:0}
 .dashboard-news .updates>div:first-child time{font-weight:700}
 
+/* Expanded acceptance note. Keep each collaborator's name only once. */
+.dashboard-news .updates>div:first-child p{display:none}
+.dashboard-news .updates>div:first-child::after{
+  content:"Alhamdulillah! Happy to share that our undergraduate thesis, “Representation-Aware Unlearning via Activation Signatures: From Suppression to Entity-Signature Erasure,” has been accepted to EMNLP 2026 Findings, a CORE A* venue in NLP!\A\A The path here was anything but smooth. Our first submission went out before our thesis defense, in the middle of Fall 2025 finals, and ended in a desk rejection over an appendix table reference. The second round brought reviews that were hard to work with. So we rewrote the narrative, rethought how we framed the contribution, reran experiments, and spent a lot of late nights on revisions. Eight months later, here we are.\A\A What makes this meaningful is not the venue alone, but what it took to stay with the idea long enough to see it through.\A\A Thank you to my co-authors Rezaur Rahman Bhuiyan, Tasfia Zaman, Jareen Tasneem Khondaker, and Md. Sameer Sakib; our supervisor Farig Yousuf Sadeque; and co-supervisors Nazia Tasnim and K. M. Shadman Wadith for their guidance and patience throughout. Proud of this team. Excited for what comes next.";
+  white-space:pre-line;
+  grid-column:2;
+  font-size:.91rem;
+  line-height:1.5;
+  color:var(--ink);
+}
+
 .dashboard-projects .current-grid{grid-template-columns:repeat(3,1fr);gap:9px}
 .dashboard-projects .current-grid article{padding:13px 14px;border-radius:6px;box-shadow:none}
 .dashboard-projects .current-grid article:hover{transform:none;box-shadow:0 8px 20px rgba(23,54,93,.08)}
@@ -92,4 +103,5 @@ nav a{font-size:.86rem}
   .dashboard-projects .current-grid{grid-template-columns:1fr}
   .dashboard-news .updates>div{grid-template-columns:1fr;gap:2px;padding:8px 0}
   .dashboard-news .updates>div:first-child{padding:9px}
+  .dashboard-news .updates>div:first-child::after{grid-column:1;font-size:.88rem}
 }
