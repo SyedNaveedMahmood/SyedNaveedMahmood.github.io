@@ -44,17 +44,44 @@
       <div>
         <p>This general CV highlights my work in trustworthy AI, LLM safety and security, machine unlearning, interpretability, secure agentic AI, reproducibility, and explainable AI for health.</p>
         <p>It also includes my experience with multimodal models, anomaly detection, and vision-language adaptation as supporting research areas.</p>
+        <p><strong>Updated August 2026:</strong> ERUF accepted to EMNLP 2026 Findings.</p>
         <div class="cv-actions">
-          <a class="cv-button" href="assets/Syed_Naveed_Mahmood_CV.pdf" download>Download PDF</a>
-          <a class="cv-button secondary" href="assets/Syed_Naveed_Mahmood_CV.pdf" target="_blank" rel="noreferrer">Open in new tab</a>
+          <a id="cv-download" class="cv-button" href="assets/Syed_Naveed_Mahmood_CV.pdf" download="Syed_Naveed_Mahmood_CV.pdf">Download PDF</a>
+          <a id="cv-open" class="cv-button secondary" href="assets/Syed_Naveed_Mahmood_CV.pdf" target="_blank" rel="noreferrer">Open in new tab</a>
         </div>
       </div>
     </section>
     <div class="cv-frame-wrap">
-      <iframe class="cv-frame" src="assets/Syed_Naveed_Mahmood_CV.pdf#view=FitH" title="Syed Naveed Mahmood CV"></iframe>
+      <iframe id="cv-frame" class="cv-frame" src="assets/Syed_Naveed_Mahmood_CV.pdf#view=FitH" title="Syed Naveed Mahmood CV"></iframe>
     </div>
   </main>
 
   <footer><div class="page-width"><p>© 2026 Syed Naveed Mahmood</p><a href="index.html">Return home ←</a></div></footer>
+
+  <script>
+    const cvParts = [
+      'assets/cv-data/cv-01.txt',
+      'assets/cv-data/cv-02.txt',
+      'assets/cv-data/cv-03.txt',
+      'assets/cv-data/cv-04.txt',
+      'assets/cv-data/cv-05.txt'
+    ];
+
+    Promise.all(cvParts.map(path => fetch(path).then(response => {
+      if (!response.ok) throw new Error(`Could not load ${path}`);
+      return response.text();
+    })))
+      .then(parts => {
+        const cvBase64 = parts.join('');
+        const cvBytes = Uint8Array.from(atob(cvBase64), char => char.charCodeAt(0));
+        const cvUrl = URL.createObjectURL(new Blob([cvBytes], { type: 'application/pdf' }));
+        document.getElementById('cv-download').href = cvUrl;
+        document.getElementById('cv-open').href = cvUrl;
+        document.getElementById('cv-frame').src = cvUrl + '#view=FitH';
+      })
+      .catch(error => {
+        console.error('Unable to load the updated CV:', error);
+      });
+  </script>
 </body>
 </html>
