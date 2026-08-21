@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css?v=20260727a">
+  <link rel="stylesheet" href="home.css?v=20260821a">
 </head>
 <body id="home">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -16,7 +17,7 @@
     <div class="nav-wrap">
       <a class="site-name" href="#home">Syed Naveed Mahmood</a>
       <nav aria-label="Primary navigation">
-        <a href="#home" aria-current="page">Home</a><a href="#current-work">Current Work</a><a href="#publications">Publications &amp; Projects</a><a href="#teaching">Teaching</a><a href="cv.html">CV</a><a href="blog.html">Blog</a><a href="random.html">Random Stuff</a><a href="#contact">Contact</a>
+        <a href="#home" aria-current="page">Home</a><a href="#updates">Updates</a><a href="#current-work">Current Work</a><a href="#publications">Publications</a><a href="#teaching">Teaching</a><a href="cv.html">CV</a><a href="blog.html">Blog</a><a href="random.html">Random Stuff</a><a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
@@ -24,33 +25,49 @@
   <section class="banner" aria-label="Profile introduction">
     <div class="banner-overlay">
       <div class="page-width identity">
-        <img class="profile-photo" src="https://avatars.githubusercontent.com/u/159930942?v=4" alt="Portrait of Syed Naveed Mahmood" width="150" height="150" decoding="async">
-        <div><h1>Syed Naveed Mahmood</h1><p>Trustworthy AI Researcher | Lecturer</p><span>Dhaka, Bangladesh</span></div>
+        <img class="profile-photo" src="https://avatars.githubusercontent.com/u/159930942?v=4" alt="Portrait of Syed Naveed Mahmood" width="118" height="118" decoding="async">
+        <div>
+          <h1>Syed Naveed Mahmood</h1>
+          <p>Trustworthy AI Researcher · Lecturer</p>
+          <span>LLM Safety · Machine Unlearning · Mechanistic Interpretability · Secure AI Agents</span>
+          <span class="identity-location">Dhaka, Bangladesh</span>
+        </div>
       </div>
     </div>
   </section>
 
   <main id="main" class="page-width content">
-    <section class="section-block">
-      <div class="section-title"><p>Research and academic milestones</p><h2>What&apos;s Going On</h2></div>
-      <div class="updates">
-        <div><time>August 2026</time><p>🎉 Happy news! Our ERUF paper, <em>Representation-Aware Unlearning via Activation Signatures: From Suppression to Entity-Signature Erasure</em>, has been accepted to <strong>EMNLP 2026 Findings</strong>!</p></div>
-        <div><time>July 2026</time><p>Continued the BlackboxNLP reproducibility task paper on attention-sink circuits and implementation sensitivity.</p></div>
-        <div><time>July 2026</time><p>Began experimental work on new research directions in secure, long-horizon AI agents.</p></div>
-        <div><time>2026</time><p>Joined Daffodil International University as Contractual Faculty.</p></div>
-        <div><time>May 2026</time><p>Submitted my representation-aware machine unlearning work to ACL Rolling Review.</p></div>
-        <div><time>2026</time><p>Completed my B.Sc. in CSE from BRAC University with a CGPA of 3.95/4.00.</p></div>
-        <div><time>2025</time><p>Published GradG-AttnSleep at IEEE ICITEE.</p></div>
+    <section class="research-dashboard section-block">
+      <div id="updates" class="dashboard-news anchor-section">
+        <div class="section-title"><p>Latest</p><h2>What&apos;s Going On</h2></div>
+        <div class="updates">
+          <div><time>August 2026</time><p>🎉 Our ERUF paper, <em>Representation-Aware Unlearning via Activation Signatures: From Suppression to Entity-Signature Erasure</em>, was accepted to <strong>EMNLP 2026 Findings</strong>.</p></div>
+          <div><time>July 2026</time><p>Continued the BlackboxNLP reproducibility study on attention-sink circuits and implementation sensitivity.</p></div>
+          <div><time>July 2026</time><p>Began new experimental work on security failures in long-horizon, tool-using AI agents.</p></div>
+          <div><time>2026</time><p>Joined Daffodil International University as Contractual Faculty.</p></div>
+          <div><time>2026</time><p>Completed my B.Sc. in CSE from BRAC University with a CGPA of 3.95/4.00.</p></div>
+        </div>
+      </div>
+
+      <div id="current-work" class="dashboard-projects anchor-section">
+        <div class="section-title"><p>Ongoing research</p><h2>Current Work</h2></div>
+        <div class="current-grid">
+          <article><span>LLM Agent Security</span><h3>MIRAGE-Persist</h3><p>Studying how security failures persist across long-running, tool-using AI systems and how to evaluate them reliably.</p></article>
+          <article><span>AI Safety · Interpretability</span><h3>AgentERUF</h3><p>Representation-aware diagnostics and interventions for injected or manipulated objectives in AI agents.</p></article>
+          <article><span>Mechanistic Interpretability</span><h3>Attention-Sink Circuits</h3><p>Reproducing and stress-testing proposed mechanisms behind attention sinks across implementations and settings.</p></article>
+          <article><span>Efficient Language Models</span><h3>Activation-Space Model Correction</h3><p>Testing whether compact activation-level interventions can improve reliability in compressed language models.</p></article>
+          <article><span>Trustworthy AI · Model Security</span><h3>Mixture-of-Experts Robustness</h3><p>Investigating internal signals for detecting and mitigating compromised behavior in mixture-of-experts models.</p></article>
+          <article><span>AI for Health · EEG</span><h3>MIST-Sleep</h3><p>Building interpretable sleep-staging systems that remain dependable across datasets, recordings, and subjects.</p></article>
+        </div>
       </div>
     </section>
 
     <section class="home-grid section-block">
       <div class="main-copy">
-        <h2>Hello, and welcome to my website!</h2>
-        <p>I am Syed Naveed Mahmood, a Computer Science and Engineering graduate from <a href="https://www.bracu.ac.bd/" target="_blank" rel="noreferrer">BRAC University</a> and currently a Contractual Faculty member at Daffodil International University.</p>
-        <p>My research focuses on trustworthy artificial intelligence, with particular interests in LLM safety, machine unlearning, mechanistic interpretability, representation-level model auditing, secure AI agents, and reliable evaluation. I am especially interested in understanding what models learn internally, why interventions work, and whether their effects remain dependable under adversarial and realistic conditions.</p>
-        <p>I also work on interpretable machine learning for physiological signals, including EEG sleep-stage classification, transferability across datasets, and clinically meaningful explanations of model predictions.</p>
-        <p>Previously, I worked as an Undergraduate Teaching Assistant at BRAC University, where I supported laboratory instruction, assessment, and mentoring for more than 100 students.</p>
+        <h2>About Me</h2>
+        <p>I am a Computer Science and Engineering graduate from <a href="https://www.bracu.ac.bd/" target="_blank" rel="noreferrer">BRAC University</a> and currently a Contractual Faculty member at Daffodil International University.</p>
+        <p>My research focuses on trustworthy artificial intelligence, especially LLM safety, machine unlearning, mechanistic interpretability, representation-level model auditing, secure AI agents, and reliable evaluation. I am interested in what models encode internally, why interventions work, and whether their effects remain dependable under adversarial and realistic conditions.</p>
+        <p>I also work on interpretable machine learning for physiological signals, including EEG sleep-stage classification and cross-dataset reliability.</p>
       </div>
       <aside class="profile-card">
         <h3>Research Interests</h3>
@@ -58,19 +75,6 @@
         <h3>Links</h3>
         <div class="quick-links"><a href="https://github.com/SyedNaveedMahmood">GitHub ↗</a><a href="https://www.linkedin.com/in/syed-naveed-mahmood-64738b329">LinkedIn ↗</a><a href="https://arxiv.org/abs/2601.10566">arXiv ↗</a><a href="mailto:syed.naveed.mahmood@g.bracu.ac.bd">Email ↗</a></div>
       </aside>
-    </section>
-
-    <section id="current-work" class="section-block anchor-section">
-      <div class="section-title"><p>Ongoing research</p><h2>Current Work</h2></div>
-      <p class="section-intro">These are high-level descriptions of research currently under development. Technical details will be shared after the corresponding studies are ready.</p>
-      <div class="current-grid">
-        <article><span>LLM Agent Security</span><h3>MIRAGE-Persist</h3><p>Studying how security failures can persist across long-running, tool-using AI systems and how they should be evaluated reliably.</p></article>
-        <article><span>AI Safety · Interpretability</span><h3>AgentERUF</h3><p>Exploring representation-aware methods for understanding and defending AI agents against injected or manipulated objectives.</p></article>
-        <article><span>Mechanistic Interpretability · Reproducibility</span><h3>Attention-Sink Circuits</h3><p>Reproducing and stress-testing mechanistic explanations of attention sinks across implementations and experimental settings.</p></article>
-        <article><span>Efficient &amp; Reliable Language Models</span><h3>Activation-Space Model Correction</h3><p>Investigating whether compact activation-level interventions can improve the reliability of compressed language models.</p></article>
-        <article><span>Trustworthy AI · Model Security</span><h3>Mixture-of-Experts Robustness</h3><p>Studying internal model signals that may help detect and mitigate compromised behavior in mixture-of-experts language models.</p></article>
-        <article><span>AI for Health · EEG</span><h3>MIST-Sleep</h3><p>Developing interpretable sleep-staging systems that remain dependable across datasets, recording settings, and subject populations.</p></article>
-      </div>
     </section>
 
     <section id="publications" class="section-block anchor-section">
