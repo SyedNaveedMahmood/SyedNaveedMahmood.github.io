@@ -38,7 +38,9 @@ nav a{font-size:.86rem}
 .dashboard-news .updates p{font-size:.91rem;line-height:1.45}
 .dashboard-news .updates>div:first-child{background:var(--surface);border-left:3px solid var(--blue);padding:10px 10px;margin-top:0}
 .dashboard-news .updates>div:first-child time{font-weight:700}
-.dashboard-news .updates>div:first-child p::before{content:"Serving as a reviewer for the BlackboxNLP 2026 Reproducibility Track.";display:block;margin-bottom:7px;font-weight:600;color:var(--navy)}
+.dashboard-news .updates>div:first-child p::before{content:"• Serving as a reviewer for the BlackboxNLP 2026 Reproducibility Track.\A• ";white-space:pre-line;font-weight:600;color:var(--navy)}
+.dashboard-news .updates>div:nth-child(2) p::before,.dashboard-news .updates>div:nth-child(3) p::before{content:"• ";font-weight:700;color:var(--blue)}
+.dashboard-news .updates>div:nth-child(3) time{visibility:hidden}
 
 .dashboard-projects .current-grid{grid-template-columns:repeat(3,1fr);gap:9px}
 .dashboard-projects .current-grid article{padding:13px 14px;border-radius:6px;box-shadow:none}
@@ -93,4 +95,5 @@ nav a{font-size:.86rem}
   .dashboard-projects .current-grid{grid-template-columns:1fr}
   .dashboard-news .updates>div{grid-template-columns:1fr;gap:2px;padding:8px 0}
   .dashboard-news .updates>div:first-child{padding:9px}
+  .dashboard-news .updates>div:nth-child(3) time{display:none}
 }
