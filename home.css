@@ -38,6 +38,7 @@ nav a{font-size:.86rem}
 .dashboard-news .updates p{font-size:.91rem;line-height:1.45}
 .dashboard-news .updates>div:first-child{background:var(--surface);border-left:3px solid var(--blue);padding:10px 10px;margin-top:0}
 .dashboard-news .updates>div:first-child time{font-weight:700}
+.dashboard-news .updates>div:first-child p::before{content:"Serving as a reviewer for the BlackboxNLP 2026 Reproducibility Track.";display:block;margin-bottom:7px;font-weight:600;color:var(--navy)}
 
 .dashboard-projects .current-grid{grid-template-columns:repeat(3,1fr);gap:9px}
 .dashboard-projects .current-grid article{padding:13px 14px;border-radius:6px;box-shadow:none}
